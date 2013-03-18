@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_layout"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/del_button"
+        android:ems="10"
+        android:text="@string/edit_location" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/main_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/doneButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/editText1"
+        android:layout_alignTop="@+id/doneButton"
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/del_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText1"
+        android:layout_alignBottom="@+id/editText1"
+        android:layout_alignParentRight="true"
+        android:onClick="delMarker"
+        android:text="@string/del_button" />
+
+    <Button
+        android:id="@+id/doneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/del_button"
+        android:layout_alignLeft="@+id/del_button"
+        android:layout_alignParentRight="true"
+        android:onClick="Done"
+        android:text="@string/done_button" />
+
+    <Button
+        android:id="@+id/create_button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/doneButton"
+        android:layout_alignBottom="@+id/doneButton"
+        android:layout_alignLeft="@+id/del_button"
+        android:onClick="createNewMarker"
+        android:layout_alignParentRight="true"
+        android:text="@string/create_button" />
+
+    <ImageView
+        android:id="@+id/mapView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/se_map" />
+
+</RelativeLayout>
